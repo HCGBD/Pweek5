@@ -6,7 +6,7 @@ require("dotenv").config();
 
 const serverApp = http.createServer(app);
 
-connectDb();
+connectDb.connectDb();
 
 
 // const io = new Server(serverApp,{

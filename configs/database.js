@@ -12,6 +12,16 @@ const  connectDb = async ()=>{
         
     }
 }
+const  connectDbTest = async ()=>{
+    try {
+        mongo.connect(process.env.MONGO_URI)
+        console.log("DB connect");
+        
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
 
 
-module.exports =  connectDb
+module.exports =  { connectDb, connectDbTest };
